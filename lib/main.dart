@@ -1,7 +1,6 @@
 import 'package:bildergalerie_app/features/profile/profile_screen.dart';
 import 'package:bildergalerie_app/features/screens/gallery_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 void main() {
   runApp(const MyApp());

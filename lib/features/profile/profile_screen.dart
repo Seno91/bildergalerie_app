@@ -20,8 +20,9 @@ class ProfileScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.asset(
-              "assets/images/kaya.jpeg",
+            ClipRRect(
+              borderRadius: BorderRadius.circular(80),
+              child: Image.asset("assets/images/kaya.jpeg"),
             ),
             const SizedBox(
               height: 8,

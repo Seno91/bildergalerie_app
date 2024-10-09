@@ -15,7 +15,7 @@ class GalleryScreen extends StatelessWidget {
       gridDelegate: const SliverSimpleGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2),
       itemBuilder: (context, index) => Padding(
-        padding: const EdgeInsets.all(4),
+        padding: const EdgeInsets.all(8),
         child: GestureDetector(
           onTap: () {
             Navigator.of(context).push(
@@ -29,7 +29,7 @@ class GalleryScreen extends StatelessWidget {
           child: Column(
             children: [
               ClipRRect(
-                borderRadius: BorderRadius.circular(18),
+                borderRadius: BorderRadius.circular(16),
                 child: Image.asset(galleryData[index].imagePath),
               ),
               Text(
