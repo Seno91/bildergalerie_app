@@ -28,23 +28,17 @@ class GalleryScreen extends StatelessWidget {
           },
           child: Column(
             children: [
-              Image.asset(galleryData[index].imagePath),
-              Container(
-                color: const Color.fromARGB(146, 98, 138, 231),
-                child: Row(
-                  children: [
-                    const Spacer(),
-                    Text(
-                      galleryData[index].imageTitle,
-                      style: const TextStyle(
-                        color: Color.fromARGB(255, 74, 41, 121),
-                        fontWeight: FontWeight.w900,
-                        fontSize: 14,
-                        fontStyle: FontStyle.italic,
-                      ),
-                    ),
-                    const Spacer()
-                  ],
+              ClipRRect(
+                borderRadius: BorderRadius.circular(18),
+                child: Image.asset(galleryData[index].imagePath),
+              ),
+              Text(
+                galleryData[index].imageTitle,
+                style: const TextStyle(
+                  color: Color.fromARGB(255, 74, 41, 121),
+                  fontWeight: FontWeight.w900,
+                  fontSize: 14,
+                  fontStyle: FontStyle.italic,
                 ),
               ),
             ],
