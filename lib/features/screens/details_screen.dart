@@ -27,7 +27,9 @@ class DetailsScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset(galleryItem.imagePath),
+              ClipRRect(
+                  borderRadius: BorderRadius.circular(16),
+                  child: Image.asset(galleryItem.imagePath)),
               Text(
                 galleryItem.imageTitle,
                 style: const TextStyle(
@@ -35,15 +37,21 @@ class DetailsScreen extends StatelessWidget {
                   fontWeight: FontWeight.w800,
                 ),
               ),
-              Text(
-                galleryItem.imageDescription,
-                style: const TextStyle(
-                    color: Colors.white, fontWeight: FontWeight.w800),
+              SafeArea(
+                minimum: const EdgeInsets.all(16),
+                child: Text(
+                  galleryItem.imageDescription,
+                  style: const TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.w800),
+                ),
               ),
-              Text(
-                galleryItem.imageDate,
-                style: const TextStyle(
-                    color: Colors.deepOrange, fontWeight: FontWeight.w800),
+              SafeArea(
+                minimum: const EdgeInsets.all(16),
+                child: Text(
+                  galleryItem.imageDate,
+                  style: const TextStyle(
+                      color: Colors.deepOrange, fontWeight: FontWeight.w800),
+                ),
               ),
             ],
           ),
