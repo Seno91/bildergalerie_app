@@ -1,4 +1,4 @@
-import 'package:bildergalerie_app/features/data/gallery_data.dart';
+import 'package:bildergalerie_app/features/models/gallery_item.dart';
 import 'package:flutter/material.dart';
 
 class DetailsScreen extends StatelessWidget {
@@ -15,7 +15,7 @@ class DetailsScreen extends StatelessWidget {
         title: const Text(
           "Details to...",
           style: TextStyle(
-            color: Color.fromARGB(255, 80, 58, 135),
+            color: Colors.white,
             fontWeight: FontWeight.w700,
           ),
         ),

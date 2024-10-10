@@ -12,7 +12,7 @@ class ProfileScreen extends StatelessWidget {
         title: const Text(
           "Hi, thats me!",
           style: TextStyle(
-            color: Color.fromARGB(255, 80, 58, 135),
+            color: Colors.white,
             fontWeight: FontWeight.w700,
           ),
         ),

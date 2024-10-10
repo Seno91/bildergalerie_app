@@ -35,8 +35,8 @@ class GalleryScreen extends StatelessWidget {
               Text(
                 galleryData[index].imageTitle,
                 style: const TextStyle(
-                  color: Color.fromARGB(255, 74, 41, 121),
-                  fontWeight: FontWeight.w900,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w700,
                   fontSize: 14,
                   fontStyle: FontStyle.italic,
                 ),

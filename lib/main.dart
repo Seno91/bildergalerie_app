@@ -26,9 +26,8 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         backgroundColor: Colors.black,
         bottomNavigationBar: NavigationBar(
+            indicatorColor: Colors.white,
             backgroundColor: Colors.black,
-            indicatorColor: const Color.fromARGB(255, 74, 41, 121),
-            shadowColor: Colors.white,
             onDestinationSelected: (value) {
               setState(() {
                 _currentIndex = value;
@@ -39,13 +38,13 @@ class _MyAppState extends State<MyApp> {
               NavigationDestination(
                   icon: Icon(
                     Icons.home,
-                    color: Colors.white,
+                    color: Colors.red,
                   ),
                   label: "Home"),
               NavigationDestination(
                 icon: Icon(
                   Icons.person_pin,
-                  color: Colors.white,
+                  color: Colors.red,
                 ),
                 label: "About me",
               ),
@@ -54,7 +53,7 @@ class _MyAppState extends State<MyApp> {
           title: const Text(
             "Gallery Portfolio",
             style: TextStyle(
-              color: Color.fromARGB(255, 80, 58, 135),
+              color: Colors.white,
               fontWeight: FontWeight.w700,
             ),
           ),

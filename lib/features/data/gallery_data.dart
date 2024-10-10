@@ -1,16 +1,4 @@
-class GalleryItem {
-  String imageTitle;
-  String imageDate;
-  String imageDescription;
-  String imagePath;
-
-  GalleryItem({
-    required this.imageTitle,
-    required this.imageDate,
-    required this.imageDescription,
-    required this.imagePath,
-  });
-}
+import 'package:bildergalerie_app/features/models/gallery_item.dart';
 
 List<GalleryItem> galleryData = [
   GalleryItem(
