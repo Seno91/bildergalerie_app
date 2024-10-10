@@ -47,7 +47,7 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           backgroundColor: const Color.fromARGB(255, 34, 34, 34),
           shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.vertical(bottom: Radius.circular(20))),
+              borderRadius: BorderRadius.vertical(bottom: Radius.circular(50))),
           title: const Text(
             "Gallery Portfolio",
             style: TextStyle(

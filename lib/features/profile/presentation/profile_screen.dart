@@ -7,22 +7,25 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: const Text(
-          "Hi, thats me!",
-          style: TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Colors.black,
+      //   title: const Text(
+      //     "Hi, thats me!",
+      //     style: TextStyle(
+      //       color: Colors.white,
+      //       fontWeight: FontWeight.w700,
+      //     ),
+      //   ),
+      // ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             ClipRRect(
-              borderRadius: BorderRadius.circular(80),
-              child: Image.asset("assets/images/kaya.jpeg"),
+              borderRadius: BorderRadius.circular(100),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: Image.asset("assets/images/kaya.jpeg"),
+              ),
             ),
             const SizedBox(
               height: 8,
