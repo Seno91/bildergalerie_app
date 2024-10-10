@@ -20,43 +20,48 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.transparent,
-        bottomNavigationBar: CurvedNavigationBar(
-            animationCurve: Curves.bounceOut,
-            buttonBackgroundColor: Colors.red,
-            color: Colors.black,
-            animationDuration: const Duration(milliseconds: 900),
-            backgroundColor: const Color.fromARGB(255, 34, 34, 34),
-            onTap: (value) {
-              setState(() {
-                _currentIndex = value;
-              });
-            },
-            index: _currentIndex,
-            items: const [
-              Icon(
-                Icons.home,
-                color: Colors.white,
-              ),
-              Icon(
-                Icons.person_pin,
-                color: Colors.white,
-              ),
-            ]),
-        appBar: AppBar(
-          backgroundColor: const Color.fromARGB(255, 34, 34, 34),
-          shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.vertical(bottom: Radius.circular(50))),
-          title: const Text(
-            "Gallery Portfolio",
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.w700,
-            ),
-          ),
+      home: SafeArea(
+        child: Scaffold(
+          backgroundColor: Colors.transparent,
+          bottomNavigationBar: CurvedNavigationBar(
+              animationCurve: Curves.bounceOut,
+              buttonBackgroundColor: Colors.white,
+              color: Colors.black,
+              animationDuration: const Duration(milliseconds: 900),
+              backgroundColor: const Color.fromARGB(255, 34, 34, 34),
+              onTap: (value) {
+                setState(() {
+                  _currentIndex = value;
+                });
+              },
+              index: _currentIndex,
+              items: const [
+                Icon(
+                  Icons.home,
+                  size: 30,
+                  color: Color.fromARGB(255, 125, 187, 231),
+                ),
+                Icon(
+                  Icons.person_pin,
+                  size: 30,
+                  color: Color.fromARGB(255, 125, 187, 231),
+                ),
+              ]),
+          // appBar: AppBar(
+          //   toolbarHeight: 100,
+          //   backgroundColor: const Color.fromARGB(255, 34, 34, 34),
+          //   shape: const RoundedRectangleBorder(
+          //       borderRadius: BorderRadius.vertical(bottom: Radius.circular(50))),
+          //   title: const Text(
+          //     "Gallery Portfolio",
+          //     style: TextStyle(
+          //       color: Colors.white,
+          //       fontWeight: FontWeight.w700,
+          //     ),
+          //   ),
+          // ),
+          body: screens[_currentIndex],
         ),
-        body: screens[_currentIndex],
       ),
     );
   }
