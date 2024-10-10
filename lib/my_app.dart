@@ -21,7 +21,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.transparent,
         bottomNavigationBar: CurvedNavigationBar(
             animationCurve: Curves.bounceOut,
             buttonBackgroundColor: Colors.red,
@@ -45,6 +45,7 @@ class _MyAppState extends State<MyApp> {
               ),
             ]),
         appBar: AppBar(
+          backgroundColor: const Color.fromARGB(255, 34, 34, 34),
           shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.vertical(bottom: Radius.circular(20))),
           title: const Text(
@@ -54,7 +55,6 @@ class _MyAppState extends State<MyApp> {
               fontWeight: FontWeight.w700,
             ),
           ),
-          backgroundColor: const Color.fromARGB(255, 34, 34, 34),
         ),
         body: screens[_currentIndex],
       ),
