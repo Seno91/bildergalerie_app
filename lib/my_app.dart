@@ -1,6 +1,5 @@
-import 'package:bildergalerie_app/features/profile/profile_screen.dart';
-import 'package:bildergalerie_app/features/screens/gallery_screen.dart';
-import 'package:bildergalerie_app/features/widgets/app_bar_widget.dart';
+import 'package:bildergalerie_app/features/profile/presentation/profile_screen.dart';
+import 'package:bildergalerie_app/features/gallery/presentation/gallery_screen.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +26,7 @@ class _MyAppState extends State<MyApp> {
             animationCurve: Curves.bounceOut,
             buttonBackgroundColor: Colors.red,
             color: Colors.black,
-            animationDuration: const Duration(milliseconds: 1500),
+            animationDuration: const Duration(milliseconds: 900),
             backgroundColor: const Color.fromARGB(255, 34, 34, 34),
             onTap: (value) {
               setState(() {
@@ -45,7 +44,18 @@ class _MyAppState extends State<MyApp> {
                 color: Colors.white,
               ),
             ]),
-        appBar: appBar,
+        appBar: AppBar(
+          shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.vertical(bottom: Radius.circular(20))),
+          title: const Text(
+            "Gallery Portfolio",
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+          backgroundColor: const Color.fromARGB(255, 34, 34, 34),
+        ),
         body: screens[_currentIndex],
       ),
     );

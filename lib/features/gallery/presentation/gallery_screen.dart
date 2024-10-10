@@ -1,5 +1,5 @@
-import 'package:bildergalerie_app/features/screens/details_screen.dart';
-import 'package:bildergalerie_app/features/data/gallery_data.dart';
+import 'package:bildergalerie_app/features/gallery/presentation/details_screen.dart';
+import 'package:bildergalerie_app/features/gallery/data/gallery_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 

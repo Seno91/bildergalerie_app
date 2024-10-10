@@ -1,4 +1,4 @@
-import 'package:bildergalerie_app/features/models/gallery_item.dart';
+import 'package:bildergalerie_app/features/gallery/domain/gallery_item.dart';
 import 'package:flutter/material.dart';
 
 class DetailsScreen extends StatelessWidget {
